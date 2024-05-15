@@ -1,8 +1,29 @@
 h1{
-    color:blue;
-    background-color:powderblue;
+    color:rgb(209, 207, 97);
+    background-color:rgb(116, 188, 223);
+    font-family:Georgia, serif;
+    text-shadow:
+	0 0 1em rgb(65, 40, 114),
+	0 0 0.2em rgb(88, 48, 168);
 }
 
 h2{
     color:slateblue;
+    background:linear-gradient(.25turn,pink,38%,#edefaf);
+}
+
+h3{
+    color:rgb(151, 107, 53);
+}
+
+a:link {
+    color: rgb(202, 86, 105);
+}
+  
+a:visited {
+    color: rgb(34, 104, 195);
+}
+  
+a:hover {
+    text-decoration: none;
 }
