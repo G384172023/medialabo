@@ -51,4 +51,9 @@ for(let li of A){
 }
 
 // 練習4-5 箇条書き追加プログラム
-
+for(let C of data){
+	let li=document.createElement('li'); 
+	li.textContent=C.name+','+C.lat+','+C.lng;
+	let ul=document.querySelector('ul#location');
+	ul.insertAdjacentElement('beforeend',li);
+}
