@@ -5,11 +5,16 @@
         <title>数当てゲーム</title>
         <script src="kazuate.js" defer></script>
     </head>
-    
+
     <body>
         <h1>数当てゲーム</h1>
-        <p></p>
-        <p><span id="kaisu">1</span>回目の予想: <span id="answer">4</span></p>
+        
+        <p>1から10の間の整数: </p>
+        <label for="shimei"></label>
+        <input type="text" name="shimei" size="5">
+        <button id="print">回答</button>
+
+        <p><span id="kaisu"></span>回目の予想: <span id="answer"></span></p>
         <p id="result"></p>
     </body>
 </html>
