@@ -201,24 +201,25 @@ let data = {
 
 /////////// 課題3-2 ここからプログラムを書こう
 
-console.log("名前:バグダッドカフェ Bagdadcafe/モータウン MOTOWN");
-console.log("アクセス:京王八王子駅を背にし右手に見えるローソンの隣のビル、ホテルザ・ビーの2階です。");
-console.log("住所:東京都八王子市明神町４-6-12 ホテル・ザ・ビー八王子（旧八王子プラザホテル）2F");
-console.log("予算:3001～4000円");
-console.log("キャッチコピー:【サプライズ演出有】結婚パーティー受付中");
-console.log("ジャンル:居酒屋");
-console.log("営業時間:月～日、祝日、祝前日:17:00～21:00（料理L.O. 20:00 ドリンクL.O. 20:00");
-console.log("最寄駅:京王八王子");
-console.log("サブジャンル:ダイニングバー・バル");
+console.log("名前:"+data.results.shop[0].name);
+console.log("アクセス:"+data.results.shop[0].access);
+console.log("住所:"+data.results.shop[0].address);
+console.log("予算:"+data.results.shop[0].budget.name);
+console.log("キャッチコピー:"+data.results.shop[0].catch);
+console.log("ジャンル:"+data.results.shop[0].genre.name);
+console.log("営業時間:"+data.results.shop[0].open);
+console.log("最寄駅:"+data.results.shop[0].station_name);
+console.log("サブジャンル:"+data.results.shop[0].sub_genre.name);
 console.log();
-console.log("名前:隠れ家バル Funny&Bouquet");
-console.log("アクセス:JR八王子駅北口徒歩1分/京王八王子駅徒歩3分");
-console.log("住所:東京都八王子市東町12-14");
-console.log("予算:2001～3000円");
-console.log("キャッチコピー:2.5時間飲み放題付2000円~【★少人数様ソファー★】");
-console.log("ジャンル: 居酒屋");
-console.log("営業時間:月～日、祝日、祝前日:17:00～翌5:00（料理L.O. 翌3:00 ドリンクL.O. 翌4:00）");
-console.log("最寄駅:八王子");
-console.log("サブジャンル:ダイニングバー・バル");
-console.log();
-console.log(data);
+console.log("名前:"+data.results.shop[1].name);
+console.log("アクセス:"+data.results.shop[1].access);
+console.log("住所:"+data.results.shop[1].address);
+console.log("予算:"+data.results.shop[1].budget.name);
+console.log("キャッチコピー:"+data.results.shop[1].catch);
+console.log("ジャンル:"+data.results.shop[1].genre.name);
+console.log("営業時間:"+data.results.shop[1].open);
+console.log("最寄駅:"+data.results.shop[1].station_name);
+console.log("サブジャンル:"+data.results.shop[1].sub_genre.name);
+
+let x=document.querySelector('div#result');
+console.log(x.textContent);
