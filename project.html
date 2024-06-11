@@ -3,30 +3,14 @@
   <head>
     <meta charset="utf-8">
     <title>プロジェクト課題</title>
-    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G001.json"></script>
-    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G002.json"></script>
-    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G003.json"></script>
-    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G004.json"></script>
-    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G005.json"></script>
-    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G006.json"></script>
-    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G007.json"></script>
-    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G008.json"></script>
-    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G009.json"></script>
-    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G010.json"></script>
-    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G011.json"></script>
-    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G012.json"></script>
-    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G013.json"></script>
-    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G014.json"></script>
-    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G015.json"></script>
-    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G016.json"></script>
-    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G017.json"></script>
-    <script src="testG.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+    <script src="gourmet.js" defer></script>
   </head>
   <body>
     <h2>グルメの検索結果</h2>
-        <p>検索キー:
-        <label for="kensaku"></label>
-        <select name="genre" id="genre">
+    <p>検索キー:
+      <label for="kensaku"></label>
+      <select name="genre" id="genre">
         <option value="">ジャンルを選んでください</option>
         <option value="01">居酒屋</option>
         <option value="02">ダイニングバー・バル</option>
@@ -46,6 +30,6 @@
         <option value="16">お好み焼き・もんじゃ</option>
         <option value="17">韓国料理</option></select>
         <button id="print">検索</button></p>
-    <div id="result"></div>
+        <div id="result"></div>
   </body>
 </html>
