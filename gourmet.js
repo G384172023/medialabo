@@ -201,6 +201,62 @@ let data = {
 
 /////////// 課題3-2 ここからプログラムを書こう
 
+let b = document.querySelector('#print');
+b.addEventListener('click',print);
+
+function print() {
+  let g = document.querySelector('select#genre');
+  let idx = g.selectedIndex;
+
+  let v=(g.selectedOptions['0'].value);
+  console.log(v);
+  let os = g.querySelectorAll('option');  // s の子要素 option をすべて検索
+  let o = os.item(idx);
+
+  let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/'+v+'.json';
+  console.log(url);
+  let genre=document.querySelectorAll('input[name="genre]');
+ 
+  for(let n of genre){
+    if(n.checked){
+      let v;
+      v=genre.id;
+
+      axios.get(url)
+      .then(showResult)
+      .catch(showError)
+      .then(finish);
+    }
+  }
+}
+
+function showResult(resp) {
+  let data = resp.data;
+  
+  if (typeof data === 'string') {
+    data = JSON.parse(data);
+  }
+
+  console.log(data);
+
+  console.log(data.x);
+}
+
+function showError(err) {
+  console.log(err);
+}
+
+function finish() {
+  console.log('何件ヒットしました。');
+}
+
+let h1=document.createElement('h3');
+h1.textContent='検索結果1件目';
+let h2=document.createElement('h3');
+h2.textContent='検索結果2件目';
+
+let div=document.querySelector('div#result');
+
 console.log("名前:"+data.results.shop[0].name);
 console.log("アクセス:"+data.results.shop[0].access);
 console.log("住所:"+data.results.shop[0].address);
@@ -210,7 +266,36 @@ console.log("ジャンル:"+data.results.shop[0].genre.name);
 console.log("営業時間:"+data.results.shop[0].open);
 console.log("最寄駅:"+data.results.shop[0].station_name);
 console.log("サブジャンル:"+data.results.shop[0].sub_genre.name);
-console.log();
+
+let p1 =document.createElement('p');
+let p2 =document.createElement('p');
+let p3 =document.createElement('p');
+let p4 =document.createElement('p');
+let p5 =document.createElement('p');
+let p6 =document.createElement('p');
+let p7 =document.createElement('p');
+let p8 =document.createElement('p');
+let p9 =document.createElement('p');
+p1.textContent=data.results.shop[0].name;
+p2.textContent=data.results.shop[0].access;
+p3.textContent=data.results.shop[0].address;
+p4.textContent=data.results.shop[0].budget.name;
+p5.textContent=data.results.shop[0].catch;
+p6.textContent=data.results.shop[0].genre.name;
+p7.textContent=data.results.shop[0].open;
+p8.textContent=data.results.shop[0].station_name;
+p9.textContent=data.results.shop[0].sub_genre;
+div.insertAdjacentElement('afterend',h1);
+h1.insertAdjacentElement('afterend',p1);
+p1.insertAdjacentElement('afterend',p2);
+p2.insertAdjacentElement('afterend',p3);
+p3.insertAdjacentElement('afterend',p4);
+p4.insertAdjacentElement('afterend',p5);
+p5.insertAdjacentElement('afterend',p6);
+p6.insertAdjacentElement('afterend',p7);
+p7.insertAdjacentElement('afterend',p8);
+p8.insertAdjacentElement('afterend',p9);
+
 console.log("名前:"+data.results.shop[1].name);
 console.log("アクセス:"+data.results.shop[1].access);
 console.log("住所:"+data.results.shop[1].address);
@@ -221,5 +306,31 @@ console.log("営業時間:"+data.results.shop[1].open);
 console.log("最寄駅:"+data.results.shop[1].station_name);
 console.log("サブジャンル:"+data.results.shop[1].sub_genre.name);
 
-let x=document.querySelector('div#result');
-console.log(x.textContent);
+let p11 =document.createElement('p');
+let p12 =document.createElement('p');
+let p13 =document.createElement('p');
+let p14 =document.createElement('p');
+let p15 =document.createElement('p');
+let p16 =document.createElement('p');
+let p17 =document.createElement('p');
+let p18 =document.createElement('p');
+let p19 =document.createElement('p');
+p11.textContent=data.results.shop[1].name;
+p12.textContent=data.results.shop[1].access;
+p13.textContent=data.results.shop[1].address;
+p14.textContent=data.results.shop[1].budget.name;
+p15.textContent=data.results.shop[1].catch;
+p16.textContent=data.results.shop[1].genre.name;
+p17.textContent=data.results.shop[1].open;
+p18.textContent=data.results.shop[1].station_name;
+p19.textContent=data.results.shop[1].sub_genre;
+p9.insertAdjacentElement('afterend',h2);
+h2.insertAdjacentElement('afterend',p11);
+p11.insertAdjacentElement('afterend',p12);
+p12.insertAdjacentElement('afterend',p13);
+p13.insertAdjacentElement('afterend',p14);
+p14.insertAdjacentElement('afterend',p15);
+p15.insertAdjacentElement('afterend',p16);
+p16.insertAdjacentElement('afterend',p17);
+p17.insertAdjacentElement('afterend',p18);
+p18.insertAdjacentElement('afterend',p19);

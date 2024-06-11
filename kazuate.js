@@ -1,6 +1,9 @@
 let kotae=Math.floor(Math.random()*10)+1;
 let kaisu=0;
 
+let z1=document.querySelector('button');
+z1.addEventListener('click',hantei);
+
 function hantei(){
     let i=document.querySelector('input[name="shimei"]');
     let yoso=i.value;
@@ -37,5 +40,3 @@ function hantei(){
     let y1=document.querySelector('p#result');
     y1.textContent=A;
 }
-let z1=document.querySelector('button');
-z1.addEventListener('click',hantei);

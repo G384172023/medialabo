@@ -3,42 +3,49 @@
   <head>
     <meta charset="utf-8">
     <title>プロジェクト課題</title>
-    <script src="gourmet.js" defer></script>
+    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G001.json"></script>
+    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G002.json"></script>
+    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G003.json"></script>
+    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G004.json"></script>
+    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G005.json"></script>
+    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G006.json"></script>
+    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G007.json"></script>
+    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G008.json"></script>
+    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G009.json"></script>
+    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G010.json"></script>
+    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G011.json"></script>
+    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G012.json"></script>
+    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G013.json"></script>
+    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G014.json"></script>
+    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G015.json"></script>
+    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G016.json"></script>
+    <script src="https://www.nishita-lab.org/web-contents/jsons/hotpepper/G017.json"></script>
+    <script src="testG.js" defer></script>
   </head>
   <body>
     <h2>グルメの検索結果</h2>
-        
         <p>検索キー:
         <label for="kensaku"></label>
-        <input type="text" name="kennsaku" size="5">
+        <select name="genre" id="genre">
+        <option value="">ジャンルを選んでください</option>
+        <option value="01">居酒屋</option>
+        <option value="02">ダイニングバー・バル</option>
+        <option value="03">創作料理</option>
+        <option value="04">和食</option>
+        <option value="05">洋食</option>
+        <option value="06">イタリアン・フレンチ</option>
+        <option value="07">中華</option>
+        <option value="08">焼肉・ホルモン</option>
+        <option value="09">アジア・エスニック料理</option>
+        <option value="10">各国料理</option>
+        <option value="11">カラオケパーティ</option>
+        <option value="12">バー・カクテル</option>
+        <option value="13">ラーメン</option>
+        <option value="14">カフェ・スイーツ</option>
+        <option value="15">その他グルメ</option>
+        <option value="16">お好み焼き・もんじゃ</option>
+        <option value="17">韓国料理</option></select>
         <button id="print">検索</button></p>
-
-    <h3>検索結果1件目</h3>
-    <ul>
-      <li>名前:バグダッドカフェ Bagdadcafe/モータウン MOTOWN</li>
-      <li>アクセス:京王八王子駅を背にし右手に見えるローソンの隣のビル、ホテルザ・ビーの2階です。</li>
-      <li>住所:東京都八王子市明神町４-6-12 ホテル・ザ・ビー八王子（旧八王子プラザホテル）2F</li>
-      <li>予算:3001～4000円</li>
-      <li>キャッチコピー:【サプライズ演出有】結婚パーティー受付中</li>
-      <li>ジャンル:居酒屋</li>
-      <li>営業時間:月～日、祝日、祝前日:17:00～21:00（料理L.O. 20:00 ドリンクL.O. 20:00）</li>
-      <li>最寄駅:京王八王子</li>
-      <li>サブジャンル:ダイニングバー・バル</li>
-    </ul>
-    <h3>検索結果2件目</h3>
-    <ul>
-      <li>名前:隠れ家バル Funny&Bouquet</li>
-      <li>アクセス:JR八王子駅北口徒歩1分/京王八王子駅徒歩3分</li>
-      <li>住所:東京都八王子市東町12-14</li>
-      <li>予算:2001～3000円</li>
-      <li>キャッチコピー:2.5時間飲み放題付2000円~【★少人数様ソファー★】</li>
-      <li>ジャンル: 居酒屋</li>
-      <li>営業時間:月～日、祝日、祝前日:17:00～翌5:00（料理L.O. 翌3:00 ドリンクL.O. 翌4:00）</li>
-      <li>最寄駅:八王子</li>
-      <li>サブジャンル:ダイニングバー・バル</li>
-    </ul>
-    </p>
     <div id="result"></div>
-
   </body>
 </html>
