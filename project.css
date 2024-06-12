@@ -27,7 +27,12 @@ h2:before {
     border: 2px solid #cbdd25;
 }
 
-h3, li#name, li#access, li#address, li#budget, li#catch, li#genre, li#open, li#station, li#sub-genre {
+h3{
+    color: #35490e;
+    font-weight: 490;
+}
+
+li#name, li#access, li#address, li#budget, li#catch, li#genre, li#open, li#station, li#sub-genre {
     color: #648d22;
 }
 
