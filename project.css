@@ -28,7 +28,7 @@ h2:before {
 }
 
 h3, li#name, li#access, li#address, li#budget, li#catch, li#genre, li#open, li#station, li#sub-genre {
-    color: #5d8220;
+    color: #648d22;
 }
 
 select#genre {
