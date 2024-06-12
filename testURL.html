@@ -1,17 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ユーザーリスト</title>
+  <meta charset="utf-8">
+  <title>プロジェクト課題</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"></script>
+  <script src="gourmet.js" defer></script>
+  <link rel="stylesheet" href="project.css">
 </head>
 <body>
-    <h1>ユーザーリスト</h1>
-    <ul id="user-list">
-        <li>Loading...</li>
-    </ul>
-
-    <!-- 別ファイルのJavaScriptを読み込む -->
-    <script src="testURL.js"></script>
+  <h2>グルメの検索結果</h2>
+  <p>検索キー:
+    <label for="kensaku"></label>
+    <select name="genre" id="genre">
+      <option value="">ジャンルを選んでください</option>
+      <option value="01">居酒屋</option>
+      <option value="02">ダイニングバー・バル</option>
+      <option value="03">創作料理</option>
+      <option value="04">和食</option>
+      <option value="05">洋食</option>
+      <option value="06">イタリアン・フレンチ</option>
+      <option value="07">中華</option>
+      <option value="08">焼肉・ホルモン</option>
+      <option value="09">アジア・エスニック料理</option>
+      <option value="10">各国料理</option>
+      <option value="11">カラオケパーティ</option>
+      <option value="12">バー・カクテル</option>
+      <option value="13">ラーメン</option>
+      <option value="14">カフェ・スイーツ</option>
+      <option value="15">その他グルメ</option>
+      <option value="16">お好み焼き・もんじゃ</option>
+      <option value="17">韓国料理</option>
+    </select>
+    <button id="print" class="btnshine">検索</button>
+  </p>
+  <div id="result"></div>
 </body>
 </html>

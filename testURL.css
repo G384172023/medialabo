@@ -35,6 +35,7 @@ select#genre {
     color: rgb(38, 81, 180);
 }
 
+/*キラッと光る*/
 .btnshine {
     position: relative;
     display: inline-block;
@@ -66,4 +67,3 @@ select#genre {
         left: 125%;
     }
 }
-
