@@ -12,7 +12,6 @@ function print() {
 
   console.log('検索キー: ' + o.textContent);
   let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G0' + o.getAttribute('value') + '.json';
-  console.log(url);
 
   axios.get(url)
     .then(showResult)
@@ -76,9 +75,13 @@ function showResult(resp) {
 }
 
 function showError(err) {
-  console.log(err);
+  console.error('エラーが発生しました:', err);
+  let div = document.querySelector('div#result');
+  let errorMessage = document.createElement('p');
+  errorMessage.textContent = '検索結果の取得に失敗しました。もう一度お試しください。';
+  div.appendChild(errorMessage);
 }
 
 function finish() {
-  console.log('検索終了');
+  console.log('検索が完了しました。');
 }

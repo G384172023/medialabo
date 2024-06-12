@@ -12,7 +12,6 @@ function print() {
 
   console.log('検索キー: ' + o.textContent);
   let url = 'https://www.nishita-lab.org/web-contents/jsons/hotpepper/G0' + o.getAttribute('value') + '.json';
-  console.log(url);
 
   axios.get(url)
     .then(showResult)
@@ -42,14 +41,23 @@ function showResult(resp) {
     let ul = document.createElement('ul');
 
     let li1 = document.createElement('li');
+    li1.setAttribute('id', 'name');
     let li2 = document.createElement('li');
+    li2.setAttribute('id', 'access');
     let li3 = document.createElement('li');
+    li3.setAttribute('id', 'address');
     let li4 = document.createElement('li');
+    li4.setAttribute('id', 'budget');
     let li5 = document.createElement('li');
+    li5.setAttribute('id', 'catch');
     let li6 = document.createElement('li');
+    li6.setAttribute('id', 'genre');
     let li7 = document.createElement('li');
+    li7.setAttribute('id', 'open');
     let li8 = document.createElement('li');
+    li8.setAttribute('id', 'station');
     let li9 = document.createElement('li');
+    li9.setAttribute('id', 'sub-genre');
 
     li1.textContent = "名前: " + shop.name;
     li2.textContent = "アクセス: " + shop.access;
@@ -80,5 +88,5 @@ function showError(err) {
 }
 
 function finish() {
-  console.log('検索終了');
+  console.log('検索が終了しました。');
 }
